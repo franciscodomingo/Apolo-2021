@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <title>Apolo</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap"
+              rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+        <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css"
+              rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+
+    </head>
+
+    <body>
+        <!-- Navegación  -->
+        
+        <div th:if="${session.usuariosession != null}" ><nav th:replace="/fragments/navbaruser :: nav"></nav> </div>
+      
+        <div th:if="${session.usuariosession == null}" ><nav th:replace="/fragments/navbar :: nav" ></nav> </div>
+
+        
+
+
+        <!-- Swiper Portada -->
+        <div class="swiper-container">
+            <div class="titulo">
+                <h1>Vive el espectáculo</h1>
+                <h3>Descubre, explora, conecta, contrata a los mejores artistas para tu evento.</h3>
+                
+                <form action="/artista/buscarArtistas">
+                <div class="row" style="margin-top: 50px;">
+                    <div class="col-sm">
+
+                        <p>Género</p>
+                        <select id="Bgenero" name="Bgenero" class="form-control generos">
+                            <option value="reggaeton">Reggaetón</option>
+                            <option value="cumbia">Cumbia</option>
+                            <option value="trap">Trap</option>
+                            <option value="acustico">Acustico</option>
+                            <option value="rock">Rock</option>
+                            <option value="folklore">Folklore</option>
+                            <option value="pop">Pop</option>
+                        </select>
+
+                    </div>
+
+                    <div class="col-sm">
+                        <!-- Selector de Fecha y Hora -->
+                        <p>Fecha</p>
+                        <div class="input-append date form_datetime selectpicker">
+                            <input size="25" type="text" name="Bfecha" readonly placeholder="dd/mm/aaaa"
+                                   style="background-color: #f8f9fa; padding: 5px;">
+                            <span class="add-on"><i class="icon-th"></i></span>
+                        </div>
+
+                    </div>
+                    <div class="col-sm">
+                        <p>Zona</p>
+                        <select class="form-control" name="BidZona" id="BidZona" style="margin-bottom: 10px;">
+                            <option th:each="zona : ${listaZonas}"
+                                    th:value="${zona.id}"
+                                    th:text="${zona.ciudad}">
+                            </option>
+                        </select>
+                    </div>
+                    <div class="col-sm">
+                        <p>&nbsp;</p>
+                        <input type="submit" class="btn btn-outline-light" value="Buscar">
+                    </div>
+                </div>
+                </form>
+            </div>
+
+            <!-- Selector de Género -->
+            
+            <!-- Slider-->
+
+            <div class="swiper mySwiper">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide"><img src="img/slide2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="img/slide4.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="img/slide3.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="img/slide1.jpg" alt=""></div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Votados Start -->
+
+        <section class="votados" style="background-color: white;">
+
+            <div class="container container-votados">
+                <div class="titulo-votados">Los más votados</div>
+                <div class="swiper mySwiper2">
+
+                    <div class="swiper-wrapper">
+                        <!-- Slide1 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados1.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">Duki<sup></sup></div>
+                            </div>
+
+                        </div>
+                        <!-- Slide2 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados2.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">Maria Becerra <sup></sup></div>
+                            </div>
+
+                        </div>
+                        <!-- Slide3 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados3.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">Nathy Peluso<sup></sup></div>
+                            </div>
+
+                        </div>
+                        <!-- Slide4 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados4.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">El Kuelgue<sup></sup></div>
+                            </div>
+
+                        </div>
+                        <!-- Slide5 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados5.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">Louta<sup></sup></div>
+                            </div>
+
+                        </div>
+                        <!-- Slide6 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados6.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">Fito Paez<sup></sup></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Votados End -->
+
+
+        <!-- Banner empieza -->
+        <section class="banner">
+            <div class="container" style="background-color: #121824;">
+                <div class="banner">
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="imagen-banner">
+                                <img src="img/banner.png" alt="" class="img-fluid">
+                            </div>
+
+                        </div>
+                        <div class="col-sm my-auto">
+                            <div class="titulo-info">
+                                <h1>Bienvenido a Apolo</h1>
+                                <h3>Somos un espacio para descubrir, explorar, conectar
+                                    <br>
+                                    y contratar a los mejores artistas para tu evento.
+                                </h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Banner termina -->
+
+        <!-- Categorias Start -->
+
+
+        <section class="zona" style="background-color: white;">
+            <!-- ZONA -->
+
+            <div class="container container-votados">
+                <div class="titulo-votados">SEGÚN TU ZONA</div>
+                <div class="swiper mySwiper3">
+
+                    <div class="swiper-wrapper">
+                        <!-- Slide1 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados1.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">Duki<sup></sup></div>
+                            </div>
+
+                        </div>
+                        <!-- Slide2 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados2.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">Maria Becerra <sup></sup></div>
+                            </div>
+
+                        </div>
+                        <!-- Slide3 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados3.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">Nathy Peluso<sup></sup></div>
+                            </div>
+
+                        </div>
+                        <!-- Slide4 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados4.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">El Kuelgue<sup></sup></div>
+                            </div>
+
+                        </div>
+                        <!-- Slide5 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados5.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">Louta<sup></sup></div>
+                            </div>
+
+                        </div>
+                        <!-- Slide6 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados6.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">Fito Paez<sup></sup></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- GENERO -->
+        <section class="genero" style="background-color: #121824;">
+            <div class="container container-votados">
+                <div class="titulo-votados" style="color: #007EA7;">SEGÚN GÉNERO</div>
+                <div class="swiper mySwiper3">
+
+                    <div class="swiper-wrapper">
+                        <!-- Slide1 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados1.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">Duki<sup></sup></div>
+                            </div>
+
+                        </div>
+                        <!-- Slide2 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados2.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">Maria Becerra <sup></sup></div>
+                            </div>
+
+                        </div>
+                        <!-- Slide3 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados3.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">Nathy Peluso<sup></sup></div>
+                            </div>
+
+                        </div>
+                        <!-- Slide4 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados4.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">El Kuelgue<sup></sup></div>
+                            </div>
+
+                        </div>
+                        <!-- Slide5 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados5.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">Louta<sup></sup></div>
+                            </div>
+
+                        </div>
+                        <!-- Slide6 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados6.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">Fito Paez<sup></sup></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- GENERO END -->
+        </section>
+        
+        <!-- LANZAMIENTOS -->
+        <section class="lanzamientos" style="background-color: white;">
+            <div class="container container-votados">
+                <div class="titulo-votados">NUEVOS LANZAMIENTOS</div>
+                <div class="swiper mySwiper3">
+
+                    <div class="swiper-wrapper">
+                        <!-- Slide1 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados1.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">Duki<sup></sup></div>
+                            </div>
+
+                        </div>
+                        <!-- Slide2 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados2.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">Maria Becerra <sup></sup></div>
+                            </div>
+
+                        </div>
+                        <!-- Slide3 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados3.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">Nathy Peluso<sup></sup></div>
+                            </div>
+
+                        </div>
+                        <!-- Slide4 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados4.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">El Kuelgue<sup></sup></div>
+                            </div>
+
+                        </div>
+                        <!-- Slide5 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados5.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">Louta<sup></sup></div>
+                            </div>
+
+                        </div>
+                        <!-- Slide6 -->
+                        <div class="swiper-slide">
+                            <img src="img/votados6.png" alt="">
+                            <div class="overlay">
+                                <div class="texto-overlay">Fito Paez<sup></sup></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Categorias End -->
+        
+        <!-- Footer -->
+        <div th:replace="/fragments/footer :: div"></div>
+
+        <!-- JavaScript Librerias -->
+        <script th:replace="/fragments/jslib :: script"></script>
+    
+    </body>
+
+</html>

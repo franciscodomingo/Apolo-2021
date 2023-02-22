@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro de Artistas</title>
+        <link rel="stylesheet" href="../css/Registro.css">
+        <link href="../img/favicon.ico" rel="icon">
+    </head>
+    <body>
+            <div class="row">
+                <div class="col">
+                    <div class="container center_div" >
+
+                        <form action="/artista/registrarArtista" method="POST" class="formulario" enctype="multipart/form-data">
+                            <div class="headerform" >
+                                <h1>Registro de Artistas</h1>
+                            </div>
+                            <p style="color:red" th:if="${error!=null}" th:text="${error}"></p>
+
+                            <div class="form-group">
+                                <label for="nombre">Nombre del Artista</label>
+                                <input type="text" class="form-control" placeholder="Pink Floyd" name="nombre" id="nombre" th:value="${nombre}">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="descripcion">Descripción</label>
+                                <textarea class="form-control" name="descripcion" id="descripcion" placeholder="Banda británica de los 70'..." rows="3" th:value="${descripcion}"></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="generos">Género Musical</label>
+                                <select id="generos" name="genero" class="form-control generos" th:value="${genero}">
+                                        <option value="reggaeton">Reggaetón</option>
+                                        <option value="cumbia">Cumbia</option>
+                                        <option value="trap">Trap</option>
+                                        <option value="acustico">Acustico</option>
+                                        <option value="rock">Rock</option>
+                                        <option value="folklore">Folklore</option>
+                                        <option value="pop">Pop</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                            <label >Zona</label>
+                            <select class="form-control" name="idZona" id="idZona" style="margin-bottom: 10px;">
+                                <option th:each="zona : ${listaZonas}"
+                                        th:value="${zona.id}"
+                                        th:text="${zona.ciudad}">
+                                </option>
+                            </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="urlSocial">Ingrese su usuario de Instagram (sin el arroba)</label>
+                                <input type="text" class="form-control" placeholder="pinkfloyd" name="urlSocial" id="urlSocial" th:value="${urlSocial}">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="urlMusica">Link: dónde escuchar</label>
+                                <input type="text" class="form-control" placeholder="open.spotify.com/pinkfloyd" name="urlMusica" id="urlMusica" th:value="${urlMusica}">
+                            </div>
+
+                            <div class="form-group" id="archivo">
+                                <label for="foto">Seleccione una foto</label>
+                                <br>
+                                <input type="file" class="form-control-file text-nowrap" name="foto" id="foto" th:value="${foto}" >
+                            </div>
+                            
+                            
+                            <input type="submit" class="btn btn-primary btn-block w-100" value="Registrar artista">
+                        </form>
+
+                    </div>
+
+
+                </div>
+                <div class="col logoapolo">
+                    <img src="../img/logo.png"/>
+                </div>	
+            </div>	
+
+       	
+    </body>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</html>	

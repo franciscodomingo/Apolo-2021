@@ -1,0 +1,161 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+body {
+
+}
+
+.caja {
+	padding: 20px;
+	margin: 20px;
+	font-family: 'Barlow', sans-serif;
+}
+
+.btn {
+	position: relative;
+	float: right;
+	margin: 5px;
+	background: #00171F;
+	color: #00171F;
+}
+
+
+
+
+
+
+.footer {
+    position: relative;
+  
+    padding-top: 90px;
+    background: #121824;
+}
+
+.footer .footer-contact,
+.footer .footer-link,
+.footer .footer-newsletter {
+    position: relative;
+    margin-bottom: 45px;
+    color: #ffffff;
+}
+
+.footer .footer-contact h2,
+.footer .footer-link h2,
+.footer .footer-newsletter h2 {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #007EA7;
+}
+
+.footer .footer-link a {
+    display: block;
+    margin-bottom: 10px;
+    color: #ffffff;
+    transition: .3s;
+}
+
+.footer .footer-link a::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .footer-link a:hover {
+    color: #007EA7;
+    letter-spacing: 1px;
+}
+
+.footer .footer-contact p i {
+    width: 25px;
+}
+
+.footer .footer-social {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+}
+
+.footer .footer-social a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #121824;
+    background: #ffffff;
+    border-radius: 40px;
+    margin-right: 5px;
+    transition: .5s;
+}
+
+.footer .footer-social a:last-child {
+    margin: 0;
+}
+
+.footer .footer-social a:hover {
+    color: #ffffff;
+    background: #007EA7;
+}
+
+.footer .footer-newsletter form {
+    position: relative;
+    width: 100%;
+}
+
+.footer .footer-newsletter input {
+    margin-bottom: 15px;
+    height: 45px;
+    background: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+.footer .footer-newsletter label {
+    margin-top: 5px;
+    color: #777777;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.footer .footer-newsletter .btn.btn-custom {
+    width: 100%;
+    color: #121824;
+    background: #ffffff;
+    box-shadow: inset 0 0 0 0 #007EA7;
+}
+
+.footer .footer-newsletter .btn:hover {
+    color: #ffffff;
+    background: #007EA7;
+    box-shadow: inset 200px 0 0 0 #007EA7;
+}
+
+.footer .copyright {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 45px;
+}
+
+.footer .copyright p {
+    margin: 0;
+    color: #ffffff;
+}
+
+.footer .copyright p a {
+    color: #007EA7;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.footer .copyright p a:hover {
+    color: #ffffff;
+}

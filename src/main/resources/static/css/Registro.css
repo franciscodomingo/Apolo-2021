@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+    height: 100vh;
+    overflow-y: hidden;
+}
+body {
+ overflow-x: hidden;
+ overflow-y: hidden;
+ 
+  background-image: url("https://images.unsplash.com/photo-1535587566541-97121a128dc5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80");
+  background-size: cover;
+
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+    padding: 100px!important;
+    
+}
+.formulario {
+		background: white;
+		
+		padding: 50px;
+		border-radius: 5px;
+		color: black;	
+                
+                
+}
+
+.form-group { 
+    margin-bottom: 10px;
+}
+
+.center_div{
+    margin: 0 auto;
+    width:80%; /* value of your choice which suits your alignment */
+    position: relative;
+    
+        
+}
+
+.btn-primary {
+    margin-top: 10px;
+    background-color: #007EA7!important; 
+    border-color: #007EA7!important;
+}
+
+label {
+    font-size: 13px;
+}
+
+input.form-control::placeholder {
+    color: #c7c7c7!important;
+}
+input:focus::placeholder {
+  color: transparent!important;
+}
+
+.logoapolo  {
+   text-align: center;
+}
+.logoapolo img {
+    height: 100px;
+    margin-left: -90px;
+}
+
+
+/* Dispositivos muy pequeños (celus, 480px o menos) */
+@media only screen and (max-width: 480px) {
+    body{
+        overflow-y: visible;
+    }
+    .headerform h1 {
+        font-size: 20px;
+    }
+    .headerform p {
+        font-size: 13px;
+    }
+    input.form-control {
+        line-height: 1!important;
+    }
+   
+    select.form-control {
+        line-height: 1!important;
+    }
+    .container{
+   
+        padding: 20px 20px 30px 20px!important;
+    
+}
+
+    .formulario {		
+   padding: 20px;  
+   
+    }
+    .logoapolo img {
+    height: 20px;
+    
+    }
+    input#foto.form-control-file.text-nowrap {
+    display: inline-block;
+    width: 270px;
+    font-size: 13px;
+    }
+    .row>* {
+        margin: 0px!important;
+        padding: 0px!important;
+    }
+    .col.logoapolo{
+        display: none;
+    }
+}
+
+/* Small devices (tablets, ipads, 480px para arriba) */
+@media only screen and (min-width: 480px) {
+  
+}
+
+/* Medium devices (netbooks, tablets grandes) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (notebooks, monitores) */
+@media only screen and (min-width: 1024px) {
+
+}
+
+/* Extra large devices (monitores grandes, teles) */
+@media only screen and (min-width: 1200px) {
+    
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Apolo - Contrata tu artista</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="../img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Template Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+
+</head>
+
+<body style="background-color: white!important;">
+
+  <!-- Navegación  -->
+        
+        <div th:if="${session.usuariosession != null}" ><nav th:replace="/fragments/navbaruser :: nav"></nav> </div>
+      
+        <div th:if="${session.usuariosession == null}" ><nav th:replace="/fragments/navbar :: nav" ></nav> </div>
+
+        
+       <div class="container">
+           <div class="infotitulo">
+           <h2 class="section-title"><b> ¿Quienes somos? Conócenos mejor. </b></h2>
+    
+    <br><div class="left-text">
+                        <p>Nos presentamos, somos Apolo, una página web destinada a mostrar conjuntos musicales y artistas independientes con
+        el objetivo de musicalizar ciertos eventos disponibles en tu región.
+        Nuestro propósito es muy simple: <b> buscamos promocionar a nuestros artistas emergentes en la región para musicalizar eventos. </p>
+                        
+                    </div>
+ 
+    
+            <div class="row">
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <img src="../img/info3.png" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
+                    <div class="left-heading">
+                        <h2 class="section-title">Encontrá la banda ideal para tu evento</h2>
+                    </div>
+                    <div class="left-text">
+                        <p>En la página de inicio de Apolo encontrarás un buscador que te permitirá encontrar una banda o un artista solista en base a determinados parámetros de búsqueda como localidad, género músical o la fecha de disponibilidad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hr"></div>
+                </div>
+            </div>
+           <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
+                    <div class="left-heading">
+                        <h2 class="section-title">Registrate para empezar a contratar</h2>
+                    </div>
+                    <div class="left-text">
+                        <p>Hacete una cuenta en Apolo para poder solicitar el presupuesto a un artista o banda, o para agregar un artista al sitio y empezar a recibir solicitudes de eventos.</p>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                    <img src="../img/info5.png" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+            </div>
+           <div class="row">
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <img src="../img/info4.png" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
+                    <div class="left-heading">
+                        <h2 class="section-title">Descubrí el artista</h2>
+                    </div>
+                    <div class="left-text">
+                        <p>Cada artista o banda cuenta con un perfil en el que podrás visualizar sus redes, sus plataformas de músicas y todo a tu disposición para tomar tu elección.</p>
+                    </div>
+                </div>
+            </div>
+           <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
+                    <div class="left-heading">
+                        <h2 class="section-title">Contratá</h2>
+                    </div>
+                    <div class="left-text">
+                        <p>Enviá una solicitud de presupuesto directamente al artista mediante nuestro sitio, sin intermediarios, y disfrutá de un evento acorde a tus expectativas!</p>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                    <img src="../img/info1.png" class="rounded img-fluid d-block mx-auto" alt="App" style="margin-bottom: 30px;">
+                </div>
+            </div>
+           
+        </div>
+          
+           <div style="margin-bottom: 60px;"><h5> ¿Todavía te quedaste con más dudas? Ve a los siguientes enlaces para conseguir más información acerca de nuestra plataforma. </h5>
+    <a href="\preguntasFrecuentes" class="btn btn-link px-3 me-2" role="button" style="background-color: #ededed; color: #007EA7"> Preguntas frecuentes </a>
+    <a href="\políticasPrivacidad" class="btn btn-link px-3 me-2" role="button" style="background-color: #ededed; color: #007EA7; "> Términos y condiciones </a>
+    </div>
+       </div>
+           
+       
+   <!-- Footer -->
+        <div th:replace="/fragments/footer :: div"></div>
+
+  
+
+  <!-- JavaScript Librerias -->
+        <script th:replace="/fragments/jslib :: script"></script>
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <title>Apolo - Contrata tu artista</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="../img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Template Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+     <!-- Navegación  -->
+        
+        <div th:if="${session.usuariosession != null}" ><nav th:replace="/fragments/navbaruser :: nav"></nav> </div>
+      
+        <div th:if="${session.usuariosession == null}" ><nav th:replace="/fragments/navbar :: nav" ></nav> </div>
+
+        
+
+    <div class="container" id="faq" style="color: white; margin-top: 30px;">
+        <h1><b> Preguntas Frecuentes </b></h1>
+    
+    <br>
+    <p></p>    
+    <h2><b>¿Cómo publicar un artista en nuestra web?</b></h2>
+    <p>Luego de que realices con éxito el registro de Usuario, podes crear con suma libertad un nuevo Artista, 
+    dándole click al botón de crear Artista que aparece en la parte superior derecha de la pantalla. 
+    Una vez ahí dentro, solo tendrás que completar una serie de puntos requeridos para tener con éxito un nuevo artista publicado en nuestra web.</p>
+    
+    <br>
+        
+    <h2><b>¿Podré modificar mi perfil en un futuro?</b></h2>
+    <p>Sí, podes. Tenes la libertad de editar tu perfil de usuario, así como tu perfil como artista, las veces que sea necesario.</p>
+
+    <br>
+        
+    <h2><b>¿Es necesario pagar por este servicio?</b></h2>
+    <h3>Nuestra web es gratuita, NO ES NECESARIO PAGAR para publicar un nuevo artista, o registrar un nuevo usuario.</h3>
+    <br>
+    <p>*Aclaración: Nuestros artistas imponen sus propios costos por sus servicios, no es nuestra responsabilidad como soporte, 
+    el manejo monetario de nuestros usuarios con sus artistas. *</p>
+
+    <br>
+    
+    <h2><b>¿Es obligatorio tener un usuario registrado para crear un nuevo artista?</b></h2>
+    <p>La respuesta es SÍ. Esto sirve para que podamos garantizar la seguridad de que nuestros artistas 
+    son personas reales y no ficticias. A la par de eso, requerimos que nuestros futuros artistas publiquen sus redes sociales 
+    para corroborar de que sean personas reales, y sus futuros clientes sean capaces de ver sus trabajos ya realizados.</p>
+
+    <br>
+    
+    <h2><b>¿Puedo hacer un pedido de un artista fuera de mi zona registrada?</b></h2>
+    <p>En lo absoluto, siempre y cuando se puedan garantizar las condiciones necesarias para el traslado y la seguridad de ambas partes.
+    *Aclaración: Ambas partes deben tener un consentimiento previo a la realización del pedido, 
+    nosotros como soporte no estamos obligados a resolver problemas de terceros. *</p>
+
+    <br>
+    
+    <h2><b>¿Cuáles son las Políticas de Privacidad de nuestra web?</b></h2>
+    <h3>Las políticas por las cuales nos guiamos son las siguientes:</h3>
+    <ol>
+    <li value="a">Si usas la plataforma para tratar Datos de la misma, proporcionarás una política de privacidad pública 
+        y de fácil acceso, y la cumplirás.</li>
+    <li>Esta política debe cumplir leyes y las regulaciones aplicables, y debe explicar de manera clara 
+        y precisa qué datos tratas, cómo y con que fines lo haces, así como los usuarios pueden solicitar 
+        la eliminación de esos datos.</li>
+    <li>Solamente puedes tratar Datos de la plataforma de la manera descrita en tu Política de privacidad y 
+        de conformidad con todas las leyes y regulaciones aplicables, así como todas las condiciones y políticas pertinentes.</li>
+    <li>Tu Política de privacidad no sustituirá, modificará ni contradirá estas Condiciones o cualquiera 
+        de las otras condiciones o policitas aplicables.</li>
+        <li>Debes mantener vigentes todas las políticas de privacidad mientras uses la Plataforma y proporcionarlas si te lo solicitamos.</li>
+    <li>No usarás un proveedor de servicios en relación con tu uso de la plataforma o el tratamiento de Datos de la misma, 
+        a menos que dicho proveedor de servicios primero acepto los siguientes puntos:</li>
+    </ol>
+    <ol>
+        <li value="1">Usar la plataforma y tratar los datos de la misma solo para ti y según tus instrucciones con el fin de 
+        proporcionar los servicios que solicitaste conforme a estas condiciones y tu política de privacidad, 
+        y no para otros individuos o entidades legales ni para otros fines, incluidos los intereses del propio 
+        Proveedor de servicios.</li>
+        <li>En caso de que el Proveedor contrate a otro proveedor de servicios, asegúrate de que el 
+            proveedor requiera por escrito al Subproveedor de servicios el cumplimiento de los requisitos anteriores.</li>
+        <li>Podemos requerir como soporte, que tu Proveedor o Subproveedor acepte estas Condiciones u otras 
+            condiciones o políticas aplicables 
+            para poder acceder a los Usuarios, a los Artistas, y todos sus datos de la plataforma.</li>
+    </ol>
+
+    <br>
+                
+    <h2><b>¿Con que requisitos de seguridad de datos trabaja la plataforma?</b></h2>
+    <h3>Nos trabajamos de la siguiente manera:</h3>
+    <ol>
+        <li value="a">Siempre implementar y mantener medidas de seguridad administrativas, físicas y técnicas para:<li>
+    </ol>
+    <ol>
+        <li value="1">Cumplir con los estándares del sector o superarlos dad la confidencialidad de los datos de la Plataforma.</li>
+        <li>Cumplir con las leyes y las regulaciones aplicables, incluidas leyes, reglas y regulaciones de privacidad y seguridad de datos.</li>
+        <li>Prevenir cualquier tratamiento (incluido, para mayor claridad, acceder, destruir, perder, alterar, divulgar, 
+    distribuir o comprometer) no autorizado de los datos de la plataforma.</li>
+    </ol>
+    <ol>
+<li value="b">Debes ofrecer a las personas una manera disponible y públicamente, 
+    de enviarte reportes de vulnerabilidades de seguridad en tu perfil, y tú debes abordar 
+    con prontitud las deficiencias identificadas.</li>
+<li>No debes solicitar, recopilar, o guardar en caché, redirigir mediante proxy ni usar credenciales 
+    de inicio de sesión de otros usuarios.</li>
+<li>No debes transferir ni compartir identificadores de usuarios o tu token de acceso y clave, 
+    a menos que un Proveedor de servicios te ayude a desarrollar, ejecutar u operar tu perfil en la plataforma.</li>
+<li>Si ocurre cualquier incidente, debes avisarnos, de forma oportuna y en un plazo no mayor 
+    a 24 horas desde que tengas conocimiento de este, y proporcionarnos la información que solicitaremos a continuación:</li>
+    <ol>
+        <li value="1"> Cualquier tratamiento no autorizado de la plataforma.</li>
+<li>Cualquier incidente razonable que pueda comprometer la seguridad, confiabilidad o integridad de la información de tu perfil como usuario, 
+o los de tu Proveedor de servicios, o Subproveedor de servicios.</li>
+    </ol>
+        
+    <br>
+    
+<h2><b>¿Puede haber revisaciones a mi cuenta como usuario?</b></h2>
+<h3>La respuesta es SÍ, siempre y cuando suceda lo siguiente:</h3>
+<ol>
+<li value="a">Nosotros como profesionales externos que trabajan bajo nuestra indicación, 
+    podemos supervisar periódicamente tu perfil y su acceso a la plataforma y el tratamiento de los datos, 
+    utilizando medidas técnicas y operativas, con el fin de garantizar la seguridad de tu perfil.</li>
+<li>Podemos requerir que nos envíes tus datos para que la revisemos o aprobemos. 
+    Independientemente, garantizarás que tu perfil cumpla con estas condiciones y todas las demás condiciones y políticas aplicables.</li> 
+<li>Cooperaras con nuestras revisiones y proporcionarás cualquier información que solicitemos debido a ello.</li>
+</ol>
+
+    <br>
+<p></p>
+<h2><b>¿Puede haber sanción?</b></h2>
+<p>Sí. Puede haber, en casos exagerados. Pero, y siempre y cuando hayas leído nuestras Condiciones de Seguridad, no habrá problema. 
+    La sanción será acorde al problema denunciado por el demandante.</p>
+
+    <br>
+
+<h2><b>¿Me notificarán cuando haya algún cambio en la plataforma?</b></h2>
+<p>Claro que sí. Mantendremos informados a nuestros usuarios destacando una noticia en nuestra plataforma, o bien, 
+    enviando un correo electrónico informando de los cambios en la misma.</p>
+
+    <br>
+
+<h2><b>¿Cómo me comunico como usuario al soporte de la página?</b></h2>
+<p>Si tenes alguna pregunta o inquietud acerca del funcionamiento de nuestra web, o de nuestras políticas, 
+    puedes comunicarte con el soporte de la pagina mediante las siguientes maneras:</p>
+<ol>
+<li value="1">Enviando un correo electrónico a (insertar enlace)</li>
+<li>Escribirnos a: Apolo Web, Dorrego 1440, Rosario 2000, Sante Fe, Argentina.</li>
+<p>También puedes visitar nuestro contenido de Términos y Condiciones de la plataforma para aclarar dudas acerca de esta política.</p>
+</ol>
+    
+<br>
+    </div>
+    
+    
+    <!-- Footer -->
+        <div th:replace="/fragments/footer :: div"></div>
+
+  
+
+    <!-- JavaScript Librerias -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+
+    <script src="js/bootstrap-datetimepicker.es.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+
+    <!-- Main Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

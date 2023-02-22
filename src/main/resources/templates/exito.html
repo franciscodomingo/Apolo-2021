@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Apolo - Contrata tu artista</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Template Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+
+     <!-- Navegación  -->
+        
+        <div th:if="${session.usuariosession != null}" ><nav th:replace="/fragments/navbaruser :: nav"></nav> </div>
+      
+        <div th:if="${session.usuariosession == null}" ><nav th:replace="/fragments/navbar :: nav" ></nav> </div>
+
+        
+    
+    
+    
+
+    <!-- Empieza Mensaje Éxito -->
+    &nbsp; &nbsp;
+    <h1 style="color:white;text-align:center" th:text="${titulo}">  </h1>
+    <p style="color:whitesmoke;text-align:center" th:text="${descripcion}"></p>
+    &nbsp; &nbsp;
+    
+    &nbsp; &nbsp;
+    <div style="margin: 0 auto; text-align: center">
+    <a href="\inicio" class="btn btn-link px-3 me-2" role="button" style="color: #007EA7;text-align:center">Volver a Inicio</a>
+    &nbsp; &nbsp;
+    </div>
+    <!-- Termina Mensaje Éxito -->
+    
+
+    <!-- Footer Empieza -->
+    <div class="footer" style="font-family: 'Work Sans', sans-serif; font-weight: 200;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-contact">
+                        <h2>Contactate con nosotros</h2>
+                        <p><i class="fa fa-map-marker-alt"></i>123 Sarmiento, Rosario, Santa Fe.</p>
+                        <p><i class="fa fa-phone-alt"></i>+54341-390-390</p>
+                        <p><i class="fa fa-envelope"></i>info@ejemplo.com</p>
+                        <div class="footer-social">
+                            <a class="btn" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-link">
+                        <h2>Preguntas Frecuentes</h2>
+                        <a href="">Información</a>
+                        <a href="">Cómo contratar</a>
+                        <a href="">Nuestro servicio</a>
+                        <a href="">FAQ</a>
+                        <a href="">Planes de precio</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-link">
+                        <h2>Preguntas Frecuentes</h2>
+                        <a href="">Información</a>
+                        <a href="">Cómo contratar</a>
+                        <a href="">Nuestro servicio</a>
+                        <a href="">FAQ</a>
+                        <a href="">Planes de precio</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-newsletter">
+                        <h2>Newsletter</h2>
+                        <form>
+                            <input class="form-control" placeholder="Nombre y Apellido">
+                            <input class="form-control" placeholder="Email">
+                            <button class="btn btn-custom">Suscribirse</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; <a href="#">Apolo</a>, All Right Reserved. Designed By <a href="https://htmlcodex.com">LOS PIBES
+                    DE EGG</a></p>
+        </div>
+    </div>
+    <!-- Footer Termina -->
+
+  
+
+    <!-- JavaScript Librerias -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+
+    <script src="js/bootstrap-datetimepicker.es.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+
+    <!-- Navbar Javascript -->
+       <script>$(function() {
+	var $dropDownMenu = $(".avatar-dropdown-menu");
+
+	$dropDownMenu.click(function(e) {		
+		e.stopPropagation();
+
+		$(document).on("click", menuCloseListener);
+
+		toggleMenu();
+	});
+
+	var toggleMenu = function() {
+		$dropDownMenu.toggleClass("open");
+	}
+
+	var menuCloseListener = function() {
+		toggleMenu();
+
+		$(document).off("click", menuCloseListener);
+	}
+});
+
+$(function() {
+	var $dropDownMenu = $(".noti-dropdown-menu");
+
+	$dropDownMenu.click(function(e) {		
+		e.stopPropagation();
+
+		$(document).on("click", menuCloseListener);
+
+		toggleMenu();
+	});
+
+	var toggleMenu = function() {
+		$dropDownMenu.toggleClass("open");
+	}
+
+	var menuCloseListener = function() {
+		toggleMenu();
+
+		$(document).off("click", menuCloseListener);
+	}
+});
+$(function() {
+	var $dropDownMenu = $(".noti-dropdown-menu2");
+
+	$dropDownMenu.click(function(e) {		
+		e.stopPropagation();
+
+		$(document).on("click", menuCloseListener);
+
+		toggleMenu();
+	});
+
+	var toggleMenu = function() {
+		$dropDownMenu.toggleClass("open");
+	}
+
+	var menuCloseListener = function() {
+		toggleMenu();
+
+		$(document).off("click", menuCloseListener);
+	}
+});
+</script>
+</body>
+
+</html>
